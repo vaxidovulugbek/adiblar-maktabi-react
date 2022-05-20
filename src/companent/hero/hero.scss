@@ -1,0 +1,67 @@
+
+
+.container {
+  width: 1320px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: all .4s ease;
+  font-family: 'Rotterburg Stylish FREE';
+  margin-top: 54px;
+  &__list {
+    list-style: none;
+    display: flex;
+    width: 1300px;
+    height: 346px;
+    transition: all .5s ease;
+  }
+  &__btngroup{
+    position: absolute;
+    top: 250px;
+    left: 80px;
+  }
+  &__item {
+    background-image: url('../../assets/ims/bgslider.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 45px 0;
+  }
+  &__text {
+    width: 1300px;
+    height: 346px;
+    padding-left: 86px;
+    color: #C9AC8C;
+  }
+  &__subtext {
+    width: 100px;
+    font-weight: 400;
+    font-size: 61px;
+    line-height: 67px;
+  }
+  &__btn {
+    width: 57.39px;
+    height: 4px;
+    margin-left: 11px;
+    border-radius: 10px;  
+    border: none;
+    cursor: pointer;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
