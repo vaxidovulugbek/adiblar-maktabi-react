@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import './header.scss'
 import logo from '../../assets/ims/logo.svg'
 import person from '../../assets/ims/person.png'
+import { Link } from 'react-router-dom'
 export default function Header() {
   let [border1, setborder1] = useState(590)
 
@@ -32,11 +33,11 @@ export default function Header() {
       <img className='header__logo' src={logo} alt="logo" />
       <nav className='header__nav'>
         <ul className='header__list'>
-          <li className='header__item'><a className='header__item-link' href="#" onClick={borderHendler1}>Bosh sahifa</a></li>
-          <li className='header__item'><a className='header__item-link' href="#" onClick={borderHendler2}>Nasr</a></li>
-          <li className='header__item'><a className='header__item-link' href="#" onClick={borderHendler3}>Nazm</a></li>
-          <li className='header__item'><a className='header__item-link' href="#" onClick={borderHendler4}>Maqolalar</a></li>
-          <li className='header__item'><a className='header__item-link' href="#" onClick={borderHendler5}>Forum</a></li>
+          <li className='header__item'><Link className='header__item-link' to='/' onClick={borderHendler1}>Bosh sahifa</Link></li>
+          <li className='header__item'><Link className='header__item-link' to='/nasr' onClick={borderHendler2}>Nasr</Link></li>
+          <li className='header__item'><Link className='header__item-link' to='/nazm' onClick={borderHendler3}>Nazm</Link></li>
+          <li className='header__item'><Link className='header__item-link' to='/maqolalar' onClick={borderHendler4}>Maqolalar</Link></li>
+          <li className='header__item'><Link className='header__item-link' to='/forum' onClick={borderHendler5}>Forum</Link></li>
         </ul>
         <span className='header__line' style={{position: 'absolute', top: 80, left: border1}}></span>
       </nav>
