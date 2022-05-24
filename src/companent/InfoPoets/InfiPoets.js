@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -8,15 +7,6 @@ import './InfoPoets.scss'
 function AbdullaAvloniy() {
   let location = useLocation()
   let location1 = location.pathname.split('/').at(-1)
-
-  // console.log(location);
-  // console.log(Objects);
-  // Objects.map(item => {
-  //   return item.books.map(el => {
-  //     console.log(el.bookname);
-  //   })
-  // })
-
   return (
     <div>
       {
@@ -72,20 +62,15 @@ function AbdullaAvloniy() {
                         </div>
                          </li>
                        </Link> 
-
                      })}
                     </ul>
-                    
-
                   </div>
                 </div>
               </div>
             </div>
           }
         })
-
       }
-    
     </div>
   )
 }

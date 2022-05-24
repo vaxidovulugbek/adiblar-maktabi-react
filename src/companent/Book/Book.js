@@ -29,7 +29,7 @@ function Book() {
                               <div className='book__content-info'>
                                 <h3 className='book__title'>{item.bookname}</h3>
                                 <div className='book__link'>
-                                  <p className='book__author'>{item.author}</p> 
+                                  <a href="#"><p className='book__author'>{item.author}</p> </a>
                                   <span> |  <i class='bx bxs-star'></i> {item.ranking}</span>
                                 </div>
                                 <div className='book__infos'>
