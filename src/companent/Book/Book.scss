@@ -1,0 +1,223 @@
+
+.book {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content-pic {
+    width: 40%;
+  }
+  &__content-img {
+    width: 100%;
+    object-fit: cover;
+    height: 810px;
+  }
+  &__content-info {
+    width: 55%;
+  }
+  &__title {
+    font-family: 'Rotterburg Stylish FREE';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 53px;
+    margin-bottom: 13px;
+    color: #C9AC8C;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  &__author {
+    color: #C9AC8C;
+    margin-right: 10px;
+  }
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 28px;
+  }
+  &__infos-p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+  }
+  &__str {
+    margin-left: 20px;
+    color: #fff;
+  }
+  &__moreinfo {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 45px;
+  }
+  &__moreinfo-text {
+    color: #C9AC8C;
+    margin-right: 9px;
+  }
+  &__moreinfo-hr {
+    margin-left: 19px;
+    width: 70%;
+    height: 1px;
+    background-color: #C9AC8C;
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 45px;
+  }
+  &__format {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 30px;
+    color: #C9AC8C;
+  }
+  &__formats {
+    display: flex;
+    align-items: center;
+  }
+  &__paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 26px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #fff;
+  }
+  &__paper-text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  &__paper-content {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__audio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 26px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #fff;
+  }
+  &__audio-text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  &__audio-content {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__electron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 26px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #fff;
+  }
+  &__electron-text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  &__electron-content {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 64px;
+  }
+  &__item {
+    margin-right: 69px;
+  }
+  &__links {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__tt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 66px;
+  }
+  &__texttt {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    color: #C9AC8C;
+  }
+  &__button {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+  }
+  &__sublist {
+    list-style: none;
+    display: flex;
+  }
+  &__subitem {
+    width: 164px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 42px;
+  }
+  &__subitem-img {
+    width: 164px;
+    height: 246px;
+    margin-bottom: 17px;
+  }
+  &__subitem-text {
+    font-family: 'Rotterburg Stylish FREE';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #C9AC8C;
+  }
+  &__subitem-content {
+    display: flex;
+    align-items: center;
+  }
+  &__subitem-rank {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0 5px;
+  }
+  &__subitem-comment {
+    font-weight: 300;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.dot {
+  position: relative;
+  bottom: 5px;
+  margin-right: 5px;
+}
+
+
+

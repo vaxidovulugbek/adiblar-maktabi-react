@@ -1,0 +1,18 @@
+.Infoauthor-content{
+  margin-top: 50px;
+  margin-bottom: 53px;
+  display: flex;
+  justify-content: space-between;
+}
+.Infoauthor {
+  position: relative;
+  width: 48%;
+  padding: 46px 60px 46px 40px;
+  background: linear-gradient(263.94deg, #161616 0%, #1E1E1E 98.06%);
+  border-radius: 15px;
+  &__img {
+    position: absolute;
+    top: -15px;
+    left: 40px;
+  }
+}

@@ -19,9 +19,9 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-.fff {
-  color: #fff;
+Link {
+  text-decoration: none !important;
 }
-.bigger {
-  font-size: 40px;
+a {
+  text-decoration: none !important;
 }

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './main.scss'
+import {Objects} from '../Object/Object'
 
 export default function Main(props) {
 
@@ -11,41 +12,34 @@ export default function Main(props) {
   const [color3,setColor3]=useState('#ffffff99');
   const [color4,setColor4]=useState('#ffffff99');
 
-  const [oreginalarr,setarre]=useState(props.arr);
-
+  const [oreginalarr,setarre]=useState(Objects);
   const [arr2, setArr] = useState(oreginalarr);
 
   
   let maincolorone = (e) => {
-
     setColor("#C9AC8C")
     setColor2("#ffffff99")
     setColor3("#ffffff99")
     setColor4("#ffffff99")
-
   }
-  
   let maincolortwo = (e) => {
     setColor("#ffffff99")
     setColor2("#C9AC8C")
     setColor3("#ffffff99")
     setColor4("#ffffff99")
   }
-  
   let maincolorthree = (e) => {
     setColor("#ffffff99")
     setColor2("#ffffff99")
     setColor3("#C9AC8C")
     setColor4("#ffffff99")
   }
-  
   let maincolorfour = (e) => {
     setColor("#ffffff99")
     setColor2("#ffffff99")
     setColor3("#ffffff99")
     setColor4("#C9AC8C")
   }
-
   let searchel = (e) => {
     e.preventDefault()
 
@@ -87,8 +81,8 @@ export default function Main(props) {
         </div>
       <ul className='main__list' style={{display: 'flex'}}>
         {arr2.map((item, i) => {
-            return <Link to={`main/item/${item.id}`}>
-              <li key={i} className="main__card">
+            return <Link to={`/main/item/${item.id}`}>
+              <li key={item.id} className="main__card">
                     <img className='main__card-img' src={item.img} alt="ajdodlar" />
                     <div className='main__card-info'>
                         <p className='main__catd-title'>{item.name}</p>
@@ -114,37 +108,6 @@ export default function Main(props) {
     </div>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

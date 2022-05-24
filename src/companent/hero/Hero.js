@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import './hero.scss'
-import backgraund  from '../../assets/ims/bgslider.png'
+import backgraund  from '../../assets/imgs/bgslider.png'
 export default function Hero() {
 
   const [color,setColor]=useState('white');
@@ -11,7 +11,6 @@ export default function Hero() {
   const [color4,setColor4]=useState('SlateGray');
 
   const [slider1,setslider1]=useState('0');
-  
 
   let herocaruselone = () => {
     setslider1(-0 * 1300)
