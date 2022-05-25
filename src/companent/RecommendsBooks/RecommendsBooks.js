@@ -29,7 +29,8 @@ function Recommendation() {
                               <div className='book__content-info'>
                                 <h3 className='book__title'>{item.title}</h3>
                                 <div className='book__link'>
-                                <Link to="RecommendAthor"><p className='book__author'>{item.author}</p></Link>
+                                {/* <Link to="RecommendAthor"><p className='book__author'>{item.author}</p></Link> */}
+                                <p className='book__author'>{item.author}</p>
                                   <span> |  <i class='bx bxs-star'></i> {item.ranking}</span>
                                 </div>
                                 <div className='book__infos'>
