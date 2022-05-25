@@ -25,3 +25,11 @@ Link {
 a {
   text-decoration: none !important;
 }
+.container {
+  width: 1320px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.ddd{
+  color: red;
+}

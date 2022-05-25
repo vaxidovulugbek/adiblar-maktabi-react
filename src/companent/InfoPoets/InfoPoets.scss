@@ -1,14 +1,14 @@
-.container {
-  width: 1320px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
+// .container {
+//   width: 1320px;
+//   padding: 0 10px;
+//   margin: 0 auto;
+// }
 .infoPoets {
   width: 100%;
   display: flex;
   color: #fff !important;
   justify-content: space-between;
-  margin-top: 30px;
+  // margin-top: 30px;
   &__content{
     width: 40%;
   }
@@ -92,7 +92,7 @@
   &__list {
     list-style: none;
     display: flex;
-    align-items: center;
+    // align-items: center;
     width: 100%;
     overflow-x: scroll;
   }
@@ -100,6 +100,7 @@
     width: 0; 
   }
   &__items {
+    width: 164px;
     display: flex;
     flex-direction: column;
     margin-right: 41px;

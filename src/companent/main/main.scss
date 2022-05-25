@@ -1,8 +1,4 @@
-.container {
-  width: 1320px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
+
 
 .main{
   &__form-content {
@@ -138,4 +134,14 @@
 }
 .card-mr {
   margin-right: 34px;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+  list-style: none;
+}
+.page-item {
+  padding: 10px;
+  background-color: #fff;
 }

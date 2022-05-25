@@ -34,7 +34,7 @@ export default function Header() {
       <img className='header__logo' src={logo} alt="logo" />
       <nav className='header__nav'>
         <ul className='header__list'>
-          <li className='header__item'><Link className='header__item-link' to='/main' onClick={borderHendler1}>Bosh sahifa</Link></li>
+          <li className='header__item'><Link className='header__item-link' to='/' onClick={borderHendler1}>Bosh sahifa</Link></li>
           <li className='header__item'><Link className='header__item-link' to='/nasr' onClick={borderHendler2}>Nasr</Link></li>
           <li className='header__item'><Link className='header__item-link' to='/nazm' onClick={borderHendler3}>Nazm</Link></li>
           <li className='header__item'><Link className='header__item-link' to='/maqolalar' onClick={borderHendler4}>Maqolalar</Link></li>

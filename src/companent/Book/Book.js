@@ -3,15 +3,16 @@
 import React from 'react'
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import {Objects} from '../Object/Object'
-import './Book.scss'
+import {recommendation} from '../Object/Object'
+import './Book.scss' 
 import Infoauthor from './Infoauthor/Infoauthor';
 
 function Book() {
   let location = useLocation()
   let location1 = location.pathname.split('/').at(-1)
-  // console.log(location1);
-  // let arrrr = [1,2,3,4,5,6,7,8,9]
-  // console.log(arrrr.at(-2));
+
+    // console.log(recommendation);
+
   return (
     <div>
        {
@@ -29,7 +30,7 @@ function Book() {
                               <div className='book__content-info'>
                                 <h3 className='book__title'>{item.bookname}</h3>
                                 <div className='book__link'>
-                                  <a href="#"><p className='book__author'>{item.author}</p> </a>
+                                  <Link to={`/main/item/${el.id}`}><p className='book__author'>{item.author}</p> </Link>
                                   <span> |  <i class='bx bxs-star'></i> {item.ranking}</span>
                                 </div>
                                 <div className='book__infos'>
@@ -77,7 +78,7 @@ function Book() {
                            <p className='book__texttt'>Sizga yoqishi mumkin</p> 
                            <button className='book__button'>Barchasini ko'rish</button>
                         </div> 
-                            <ul className='book__sublist'>
+                            {/* <ul className='book__sublist'>
                               {
                                 item.recommendation.map(element => {
                                   return <li className='book__subitem'>
@@ -90,6 +91,24 @@ function Book() {
                                             <p className='book__subitem-comment'>{element.comments} ta firklar</p>
                                         </div>
                                    </li>
+                                })
+                              }
+                            </ul> */}
+                            <ul className='book__sublist'>
+                              {
+                                recommendation.map(element => {
+                                  return <Link to={`recommends/${element.id}`}>
+                                      <li className='book__subitem'>
+                                      <img className='book__subitem-img' src={element.picture} alt="" />
+                                      <p className='book__subitem-text'>{element.title}</p>
+                                      <div className='book__subitem-content'>
+                                          <i class='bx bxs-star' ></i>
+                                          <p className='book__subitem-rank'>{element.ranking}</p>
+                                          <span className='dot'>.</span>
+                                          <p className='book__subitem-comment'>{element.comments} ta firklar</p>
+                                      </div>
+                                  </li>
+                                  </Link>
                                 })
                               }
                             </ul>
