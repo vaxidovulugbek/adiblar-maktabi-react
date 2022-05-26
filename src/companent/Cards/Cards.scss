@@ -100,39 +100,6 @@
     line-height: 16px;
   }
 }
-
-.category {
-  &__text {
-    font-family: 'Rotterburg Stylish FREE';
-    text-align: center;
-    font-weight: 400;
-    font-size: 31px;
-    line-height: 34px;
-    color: #C9AC8C;
-    margin-bottom: 30px;
-  }
-  &__list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  &__item-btn {
-    border: none;
-    background-color: transparent;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    margin-right: 69px;
-    cursor: pointer;
-  }
+.category__item-btn {
+  color: #fff;
 }
-
-.bx-search-alt {
-  margin-right: 5px;
-}
-.card-mr {
-  margin-right: 34px;
-}
-

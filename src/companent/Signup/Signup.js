@@ -1,11 +1,17 @@
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import signup from '../../assets/imgs/signup.png'
 import './Signup.scss'
 
-function Signup() {
+function Signup({setfirstname}) {
+  // const [Firstname, setfirstname] = useState()
+
+  let firstname = (e) => {
+    e.preventDefault()
+    setfirstname(e.target.value)
+  }
   return (
     <div className='signup'>
       <div className='signup__img-content'>
@@ -15,7 +21,7 @@ function Signup() {
         <p className='signup__text'>Sign up</p>
         <p className='signup__nextpage'>Already have an account? <Link className='signup__link' to="/signin">Sign in</Link> </p>
         <form className='signup__form'>
-          <input className='signup__input' type="text" placeholder='First name' required/>
+          <input className='signup__input' type="text" placeholder='First name' onChange={firstname} required/>
           <input className='signup__input' type="text" placeholder='Last name' required/>
           <input className='signup__input' type="number" placeholder='Phone' required/>
           <input className='signup__input' type="email" placeholder='Email' required/>

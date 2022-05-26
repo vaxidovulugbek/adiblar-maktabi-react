@@ -4,8 +4,28 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './main.scss'
 import {Objects} from '../Object/Object'
+import Pagination from '../Pagination/Pagination';
+import Cards from '../Cards/Cards';
+import Hero from '../hero/Hero';
 
 export default function Main(props) {
+
+  const [post, setpost] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage, setpostPerPage] = useState(6)
+
+  useEffect(() => {
+    setpost(Objects) 
+  },[])
+
+  let indexOfLastPage = currentPage * postsPerPage;
+  let indexOfFirstPage = indexOfLastPage - postsPerPage;
+  let currentPosts = post.slice(indexOfFirstPage, indexOfLastPage);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  }
+
 
   const [color,setColor]=useState('#C9AC8C');
   const [color2,setColor2]=useState('#ffffff99');
@@ -60,6 +80,7 @@ export default function Main(props) {
   return (
     <div className='container'>
      <main className='main'>
+       <Hero/>
         <div className='main__form-content'> 
           <p className='main__form-text'>Qidirish</p>
           <form className='main__form form' >
@@ -72,56 +93,20 @@ export default function Main(props) {
         </div>
         <div className='category'>
           <p className='category__text'>Asosiy kategoriyalar</p>
-          <ul className='category__list'>
-            <li className='category__item'><button className='category__item-btn' onClick={maincolorone} style={{color:color}}>Temuriylar davri</button></li>
-            <li className='category__item'><button className='category__item-btn' onClick={maincolortwo} style={{color:color2}}>Jadid adabiyoti</button></li>
-            <li className='category__item'><button className='category__item-btn' onClick={maincolorthree} style={{color:color3}}>Sovet davri</button></li>
-            <li className='category__item'><button className='category__item-btn' onClick={maincolorfour} style={{color:color4}}>Mustaqillik davri</button> </li>
-          </ul>
+          
         </div>
-      <ul className='main__list' style={{display: 'flex'}}>
-        {arr2.map((item, i) => {
-            return <Link to={`/main/item/${item.id}`}>
-              <li key={item.id} className="main__card">
-                    <img className='main__card-img' src={item.img} alt="ajdodlar" />
-                    <div className='main__card-info'>
-                        <p className='main__catd-title'>{item.name}</p>
-                        <p className='main__card-year'>{item.wasborn}-{item.died}</p>
-                        <div className='main__card-buy'>
-                          <div className='main__card-buy card-mr'>
-                            <i className="bx bx-book-alt" />
-                            <p>34</p>
-                          </div>
-                          <div className='main__card-buy'>
-                            <i className='bx bx-headphone' ></i>
-                            <p>13</p>
-                          </div>
-                        </div>
-                    </div>
-                  </li>
-            </Link>
-          })}
-      </ul>
-      <div className='pagination-content'>
-        <nav aria-label="Page navigation example">
-          <ul className="pagination">
-            <li className="page-item">
-              <a className="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-              </a>
-            </li>
-            <li className="page-item"><a className="page-link" href="#">1</a></li>
-            <li className="page-item"><a className="page-link" href="#">2</a></li>
-            <li className="page-item"><a className="page-link" href="#">3</a></li>
-            <li className="page-item">
-              <a className="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">»</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
+      
+       <Cards  postsPerPage={postsPerPage}
+        total={post.length}
+        currentPosts={currentPosts}
+        setpost={setpost}
+        arr2 = {arr2}
+        paginate={paginate}/>
+      <Pagination 
+        postsPerPage={postsPerPage}
+        total={post.length}
+        paginate={paginate}
+      />
           
      </main>
     

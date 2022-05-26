@@ -7,11 +7,13 @@ import {recommendation} from '../Object/Object'
 import './Book.scss' 
 import Infoauthor from './Infoauthor/Infoauthor';
 
-function Book() {
+function Book({hendler,setfirstname}) {
   let location = useLocation()
   let location1 = location.pathname.split('/').at(-1)
 
-    // console.log(recommendation);
+  let SaveHendler = () => {
+    setfirstname("p")
+  }
 
   return (
     <div>
@@ -45,23 +47,26 @@ function Book() {
                                   <span className='book__moreinfo-hr'></span>
                                 </div>
                                 <p className='book__text'>{item.moreinfo}</p>
-                                <p className='book__format'>Mavjud formatlar</p>
-                                <div className='book__formats'>
-                                  <div className='book__paper'>
-                                    <i className='bx bxs-book-alt'></i>
-                                    <p className='book__paper-text'>Qog'oz kitob</p>
-                                    <p className='book__paper-content'>{item.paperbook} so'm</p>
+                                <p className='book__format' onClick={hendler}>Mavjud formatlar</p>
+                                <div className='book__df'>
+                                  <div className='book__formats'>
+                                    <div className='book__paper'>
+                                      <i className='bx bxs-book-alt'></i>
+                                      <p className='book__paper-text'>Qog'oz kitob</p>
+                                      <p className='book__paper-content'>{item.paperbook} so'm</p>
+                                    </div>
+                                    <div className='book__audio'>
+                                      <i className='bx bx-headphone'></i>
+                                      <p className='book__audio-text'>Audiokitob</p>
+                                      <p className='book__audio-content'>{item.audiobook} soat</p>
+                                    </div>
+                                    <div className='book__electron'>
+                                      <i class='bx bxs-folder-minus'></i>
+                                      <p className='book__electron-text'>Elektron</p>
+                                      <p className='book__electron-content'>{item.elektron}</p>
+                                    </div>
                                   </div>
-                                  <div className='book__audio'>
-                                    <i className='bx bx-headphone'></i>
-                                    <p className='book__audio-text'>Audiokitob</p>
-                                    <p className='book__audio-content'>{item.audiobook} soat</p>
-                                  </div>
-                                  <div className='book__electron'>
-                                    <i class='bx bxs-folder-minus'></i>
-                                    <p className='book__electron-text'>Elektron</p>
-                                    <p className='book__electron-content'>{item.elektron}</p>
-                                  </div>
+                                  <button className='book__buttonn' onClick={SaveHendler}>Javonga qo'shish</button>
                                 </div>
                               </div>
                           </div>

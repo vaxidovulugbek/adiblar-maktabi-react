@@ -1,0 +1,25 @@
+.menumodal {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 8px;
+  background-color: #fff;
+  position: absolute;
+  left: -130px;
+  top: 30px;
+  border: 1px solid red;
+  z-index: 100;
+  &__info {
+    color: #404040;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  &__info:hover {
+    color: #000;
+  }
+}
+.link {
+  color: #404040;
+}

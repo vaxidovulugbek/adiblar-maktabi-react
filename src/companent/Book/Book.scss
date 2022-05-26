@@ -211,6 +211,20 @@
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
   }
+  &__df {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buttonn {
+    padding: 16px 32px;
+    height: 52px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #3C2710;
+    background-color: #C9AC8C;
+    cursor: pointer;
+  }
 }
 
 .dot {

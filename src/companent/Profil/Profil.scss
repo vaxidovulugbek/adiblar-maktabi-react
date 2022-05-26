@@ -1,0 +1,81 @@
+
+.profil{
+  width: 100%;
+  display: flex;
+  background: radial-gradient(85.43% 1678.66% at 98.07% 50%, #2F2F2F 0%, #171717 100%);
+  box-shadow: 0px 4px 73px rgba(0, 0, 0, 0.25);
+  padding: 40px 77px;
+  background-image: url('../../assets/imgs/profilbg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  &__bio {
+    margin-right: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__avatar {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  &__avatar-part{
+    position: relative;
+    margin-bottom: 11px;
+  }
+  &__avatar-part .bxs-star{
+    position: absolute;
+    right: 12px;
+    bottom: 0;
+    font-size: 20px;
+    padding: 8px;
+    border: 2px solid #C9AC8C;
+    border-radius: 50%;
+    color: #C9AC8C;
+    background-color: #191919;
+  }
+  &__reward {
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 7px;
+    color: #C9AC8C;
+  }
+  &__book-num {
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    color: #C9AC8C;
+  }
+  &__info-content {
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 22px;
+  }
+  &__info-sub {
+    color: #fff;
+  }
+  &__info-bio {
+    color: #a4a4a4;
+    margin-left: 6px;
+  }
+}
+.profil-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 400px;
+}
