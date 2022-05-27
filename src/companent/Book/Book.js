@@ -7,13 +7,11 @@ import {recommendation} from '../Object/Object'
 import './Book.scss' 
 import Infoauthor from './Infoauthor/Infoauthor';
 
-function Book({hendler,setfirstname}) {
+function Book({setfirstname,savehendler}) {
   let location = useLocation()
   let location1 = location.pathname.split('/').at(-1)
 
-  let SaveHendler = () => {
-    setfirstname("p")
-  }
+
 
   return (
     <div>
@@ -47,7 +45,7 @@ function Book({hendler,setfirstname}) {
                                   <span className='book__moreinfo-hr'></span>
                                 </div>
                                 <p className='book__text'>{item.moreinfo}</p>
-                                <p className='book__format' onClick={hendler}>Mavjud formatlar</p>
+                                <p className='book__format'>Mavjud formatlar</p>
                                 <div className='book__df'>
                                   <div className='book__formats'>
                                     <div className='book__paper'>
@@ -66,7 +64,7 @@ function Book({hendler,setfirstname}) {
                                       <p className='book__electron-content'>{item.elektron}</p>
                                     </div>
                                   </div>
-                                  <button className='book__buttonn' onClick={SaveHendler}>Javonga qo'shish</button>
+                                  <button className='book__buttonn' onClick={()=> savehendler(item)} >Javonga qo'shish</button>
                                 </div>
                               </div>
                           </div>
@@ -83,22 +81,7 @@ function Book({hendler,setfirstname}) {
                            <p className='book__texttt'>Sizga yoqishi mumkin</p> 
                            <button className='book__button'>Barchasini ko'rish</button>
                         </div> 
-                            {/* <ul className='book__sublist'>
-                              {
-                                item.recommendation.map(element => {
-                                  return <li className='book__subitem'>
-                                        <img className='book__subitem-img' src={element.picture} alt="" />
-                                        <p className='book__subitem-text'>{element.title}</p>
-                                        <div className='book__subitem-content'>
-                                            <i class='bx bxs-star' ></i>
-                                            <p className='book__subitem-rank'>{element.ranking}</p>
-                                            <span className='dot'>.</span>
-                                            <p className='book__subitem-comment'>{element.comments} ta firklar</p>
-                                        </div>
-                                   </li>
-                                })
-                              }
-                            </ul> */}
+                          
                             <ul className='book__sublist'>
                               {
                                 recommendation.map(element => {

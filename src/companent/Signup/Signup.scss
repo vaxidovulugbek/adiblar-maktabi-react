@@ -68,8 +68,8 @@
     justify-content: center;
     font-weight: 500;
     font-size: 18px;
-    // line-height: 36px;
-    // border-radius: 99px;
+    line-height: 36px;
+    border-radius: 99px;
     margin-top: 14px;
     margin-bottom: 14px;
     color: #fff;
@@ -92,6 +92,9 @@
     background: #152540;
     cursor: pointer;
   }
+}
+.input-validation {
+  font-size: 14px;
 }
 
 

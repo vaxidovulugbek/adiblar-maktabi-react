@@ -1,9 +1,8 @@
 
 import React, { useState } from 'react'
 import './Profil.scss'
-function Profil({setfirstname,Firstname}) {
-  // let [nomi, ozget] = useState()
-  // console.log(setfirstname);
+function Profil({setfirstname,Firstname,Lasttname}) {
+  
   let menulist = ["O’qilganlar","O’qishni xohlayman","O’qilmoqda","Adiblar"]
   return (
     <div className='container'>
@@ -17,7 +16,7 @@ function Profil({setfirstname,Firstname}) {
           <p className='profil__book-num'>186 ta kitob o'qigan</p>
         </div>
         <div className='profil__info'>
-          <h2 className='profil__title'>Ulugbek Vakhidov</h2>
+          <h2 className='profil__title'>{Firstname} {Lasttname}</h2>
           <div className='profil__info-content'><span className='profil__info-sub'>Tavallud:</span><span className='profil__info-bio'>March 03,1441</span></div>
           <div className='profil__info-content'><span className='profil__info-sub'>Manzil:</span><span className='profil__info-bio'>Las Vegas</span></div>
           <div className='profil__info-content'><span className='profil__info-sub'>Bio:</span><span className='profil__info-bio'>Senior developer</span></div>
@@ -25,11 +24,14 @@ function Profil({setfirstname,Firstname}) {
        
       </div>
        <div className='profil-menu'>
-       {
+       <div className='profil-menu-rec'></div>
+        <div className='profil-menu__info'>
+        {
           menulist.map(item=> {
             return <p>{item}</p>
           })
         }
+        </div>
        </div>
     </div>
   )

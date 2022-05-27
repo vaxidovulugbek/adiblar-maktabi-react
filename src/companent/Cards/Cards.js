@@ -5,16 +5,11 @@ import './Cards.scss'
 
 function Cards({currentPosts,postsPerPage,total,paginate,arr2,setpost}) {
 
-  let category = ["All","O'zbek","Jahon","Diniy"]
+ let category = ["All","O'zbek","Jahon","Diniy"]
  const filterbycategory = (e) => {
-    // console.log(e.target);
    if (e.target.textContent == "All") {
     setpost(
       arr2
-      // arr2.filter(item => {
-      //   console.log(item.id);
-      //    return item.id == 1
-      //  })
     )
    }
    if (e.target.textContent == "Jahon") {

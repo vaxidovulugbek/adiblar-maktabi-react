@@ -93,14 +93,13 @@ export default function Main(props) {
         </div>
         <div className='category'>
           <p className='category__text'>Asosiy kategoriyalar</p>
-          
         </div>
       
        <Cards  postsPerPage={postsPerPage}
         total={post.length}
         currentPosts={currentPosts}
         setpost={setpost}
-        arr2 = {arr2}
+        arr2 = {Objects}
         paginate={paginate}/>
       <Pagination 
         postsPerPage={postsPerPage}

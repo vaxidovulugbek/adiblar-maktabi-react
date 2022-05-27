@@ -1,0 +1,26 @@
+.df {
+  display: flex;
+}
+.saved {
+  display: flex;
+  margin: 20px 0;
+  // height: 100vh;
+  // background-color: red;
+  &__item {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  }
+  &__img {
+    width: 100%;
+    height: 180px !important;
+  }
+  &__bookname {
+    color: #fff;
+    margin: 6px 0;
+  }
+}
+
+
+

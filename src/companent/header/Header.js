@@ -9,10 +9,10 @@ import MenuModal from '../MenuModal/MenuModal'
 
 
 export default function Header() {
-  let [border1, setborder1] = useState(590)
+  let [border1, setborder1] = useState(560)
 
   let borderHendler1 = () => {
-    setborder1(580)
+    setborder1(560)
   }
   let borderHendler2 = () => {
     setborder1(684)
@@ -40,7 +40,7 @@ export default function Header() {
       <nav className='header__nav'>
         <ul className='header__list'>
           <li className='header__item'><Link className='header__item-link' to='/main' onClick={borderHendler1}>Bosh sahifa</Link></li>
-          <li className='header__item'><Link className='header__item-link' to='/nasr' onClick={borderHendler2}>Nasr</Link></li>
+          <li className='header__item'><Link className='header__item-link' to='/nasr' onClick={borderHendler2}>Kitoblar</Link></li>
           <li className='header__item'><Link className='header__item-link' to='/nazm' onClick={borderHendler3}>Nazm</Link></li>
           <li className='header__item'><Link className='header__item-link' to='/maqolalar' onClick={borderHendler4}>Maqolalar</Link></li>
           <li className='header__item'><Link className='header__item-link' to='/' onClick={borderHendler5}>Forum</Link></li>

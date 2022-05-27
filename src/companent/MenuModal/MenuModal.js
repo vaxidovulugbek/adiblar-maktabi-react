@@ -21,8 +21,10 @@ function MenuModal(props) {
        </Link>
       </div>
       <div className='menumodal__info'>
-        <i className='bx bxs-edit-alt' ></i>
-        Taxrirlash
+       <Link className='link' to="Edit">
+          <i className='bx bxs-edit-alt' ></i>
+          Taxrirlash
+       </Link>
       </div>
     </div>
   )
